@@ -1,0 +1,51 @@
+.heading {
+  float: left;
+}
+.toggle-display {
+  float: right;
+  top: 0;
+  right: 0;
+  font-size: 1.2em;
+  color: rgba(0, 51, 0, 0.8);
+}
+.navigation {
+  display: none;
+}
+.navigation-container {
+  line-height: 1.5em;
+  margin-top: 4em;
+  border-bottom: solid;
+  border-width: thin;
+}
+.template {
+  display: none;
+}
+.project-title {
+  margin-top: 1.2em;
+  margin-bottom: 0.8em;
+  padding: 0.4em;
+  background-color: rgba(0, 153, 51, 0.5);
+  text-align: center;
+}
+#article-body {
+  text-align: center;
+}
+
+@media only screen and (min-width: 640px) {
+  .navigation {
+    margin-top: 2em;
+    display: block;
+  }
+  .toggle-display {
+    display: none;
+  }
+  .navigation li {
+    display: inline-block;
+    margin-right: 5%;
+    margin-left: 5%
+  }
+  #article-body {
+    width: 80%;
+    margin-left: 10%;
+  }
+}

@@ -1,0 +1,26 @@
+h1 {
+  font-family: 'Cabin', sans-serif;
+  font-size: 2em;
+}
+li {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9em;
+}
+a {
+  text-decoration: none;
+}
+nav {
+  clear: both;
+}
+section {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.2em;
+  margin: 1em;
+}
+address {
+  display: inline-block;
+}
+img {
+  max-width: 100%;
+  width: 20em;
+}
