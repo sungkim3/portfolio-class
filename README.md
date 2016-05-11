@@ -4,3 +4,4 @@
 -Mailbox hike --> www.blissfulbritt.com
 -Snow Lake hike --> www.trover.com
 -Annette Lake hike --> www.pinterest.com by Kelly Marks
+-Cape Flattery hike --> www.trover.com
