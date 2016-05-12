@@ -20,14 +20,22 @@
   border-bottom: solid;
   border-width: thin;
   background: black;
+
 }
 .navigation {
   display: none;
   background: black;
-  transition: 5s;
+  /*transition-property: all;
+  transition-duration: 2s;*/
+  /*height: 0;
+  overflow: none;*/
+
 }
 .navigation-display {
+  /*overflow: none;*/
   display: block;
+  /*height: auto;*/
+  /*overflow: hidden;*/
 
 }
 .navigation > li a {
@@ -86,6 +94,9 @@
 }
 
 @media only screen and (min-width: 640px) {
+  .white-space {
+    height: 5em;
+  }
   .navigation {
     margin-top: 2em;
     display: block;
