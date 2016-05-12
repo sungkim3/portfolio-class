@@ -3,8 +3,14 @@ var projectView = {};
 projectView.handleMainNav = function() {
   $('.navigation-container').on('click', '.tab', function(){
     var $target = $(this).data('content');
-    $('.tab-content').hide();
-    $('#' + $target).fadeIn();
+    if ($target === $('#home-page').data('content')) {
+      $('.tab-content').fadeIn();
+      $('.containing-landing').fadeIn();
+    } else {
+      $('.tab-content').hide();
+      $('.containing-landing').hide();
+      $('#' + $target).fadeIn();
+    }
   });
 
   $('.navigation-container .tab:first').click();
@@ -54,6 +60,7 @@ projectView.handleCategoryFilter = function() {
     } else {
       $('#projects').find('article').not('.template').fadeIn();
     }
+    $('#category-filter').val('');
   });
 };
 $(document).ready(function() {
