@@ -6,37 +6,58 @@
     <link rel="stylesheet" type="text/css" href="styles/base.css">
     <link rel="stylesheet" type="text/css" href="styles/layout.css">
     <link rel="stylesheet" type="text/css" href="styles/modules.css">
-    <link href='https://fonts.googleapis.com/css?family=Cabin|Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Cabin|Roboto|Playfair+Display|Oswald' rel='stylesheet' type='text/css'>
     <title>Sung Portfolio</title>
   </head>
   <body>
-    <h1 class="heading">SUNG KIM</h1>
-    <div class="toggle-display">Menu</div>
-    <nav class="navigation-container">
-      <ul class="navigation" id="hidden-nav">
-        <li>About</li>
-        <li>Contact</li>
-        <li>Portfolio</li>
-        <li><a href="https://github.com/sungkim3">GitHub</a></li>
-      </ul>
-    </nav>
+    <header id="home" class="heading-container">
+      <header class="nav-header-container">
+        <h1 class="heading">SUNG KIM</h1>
+        <div class="toggle-display">MENU</div>
+        <nav class="navigation-container">
+          <ul class="navigation" id="hidden-nav">
+            <li class="tab" data-content="projects"><a href="#">Home</a></li>
+            <li class="tab" data-content="about"><a href="#">About</a></li>
+            <li class="tab" data-content="projects"><a href="#">Portfolio</a></li>
+            <li class="tab">Contact</li>
+            <li><a href="https://github.com/sungkim3">GitHub</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="white-space"></div>
+      <div class="containing-landing"><div class="landing-container"><img class="landing-image" src="img/welcome.jpg"/><span class="landing-welcome">H A F A - A D A I</span></div></div>
+    </header>
     <main>
-      <section id="projects">
+      <section id="projects" class="tab-content">
+        <div>
+          <ul id="filters">
+            <li>
+              <select id="category-filter">
+                <option value="">-- Filter by Categories --</option>
+              </select>
+            </li>
+          </ul>
+        </div>
         <article class="template" data-category="template">
           <header>
             <h1 class="project-title">Title</h1>
-            <img src=""/>
-            <div>
+            <img class="project-image" src=""/>
+            <div class="by-line">
               By <address><a href="">Author Name</a></address>
               published <time pubdate>Publish Time</time>
             </div>
           </header>
-          <section id="article-body"></section>
+          <section class="article-body" id="article-body"></section>
+          <a href="#" class="read-on">Show More &rarr;</a>
         </article>
+      </section>
+      <section id="about" class="tab-content">
+        <p> This is my About me Section </p>
       </section>
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="js/projects.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/projectView.js"></script>
   </body>
 </html>

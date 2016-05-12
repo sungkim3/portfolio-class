@@ -1,3 +1,10 @@
+.nav-header-container {
+  background: black;
+  color: white;
+  width: 100%;
+  border-bottom-color: black;
+  z-index: 2;
+}
 .heading {
   float: left;
 }
@@ -6,16 +13,51 @@
   top: 0;
   right: 0;
   font-size: 1.2em;
-  color: rgba(0, 51, 0, 0.8);
+  font-family: 'Cabin', sans-serif;
+  color: white;
+}
+.navigation-container {
+  border-bottom: solid;
+  border-width: thin;
+  background: black;
 }
 .navigation {
   display: none;
+  background: black;
+  transition: 5s;
 }
-.navigation-container {
-  line-height: 1.5em;
-  margin-top: 4em;
+.navigation-display {
+  display: block;
+
+}
+.navigation > li a {
+  background: black;
+  color: white;
+}
+.containing-landing {
+  position:static;
+}
+.landing-container {
+  position: relative;
+  /*top: 2.8em;*/
+  /*left: 0em;*/
+  width: 100%;
+}
+.landing-image {
+  z-index: 0;
+}
+.landing-welcome {
+  position: absolute;
+  top: 20%;
+  left: 70%;
+  font-family: 'Oswald', sans-serif;
+  z-index: 1;
+  font-size: 100%;
+  color: black;
+  font-weight: bold;
   border-bottom: solid;
-  border-width: thin;
+  border-bottom-right-radius: 10%;
+  border-bottom-left-radius: 10%;
 }
 .template {
   display: none;
@@ -24,11 +66,23 @@
   margin-top: 1.2em;
   margin-bottom: 0.8em;
   padding: 0.4em;
-  background-color: rgba(0, 153, 51, 0.5);
+  /*background-color: rgba(0, 153, 51, 0.5);*/
+  background: black;
+  color: white;
   text-align: center;
+}
+.project-image {
+  width: 20em;
 }
 #article-body {
   text-align: center;
+}
+
+@media only screen and (min-width: 500px) {
+  .landing-welcome {
+    left: 65%;
+    font-size: 150%;
+  }
 }
 
 @media only screen and (min-width: 640px) {
@@ -36,16 +90,56 @@
     margin-top: 2em;
     display: block;
   }
+  .landing-welcome {
+    left: 68%;
+    font-size: 175%;
+  }
   .toggle-display {
     display: none;
   }
   .navigation li {
     display: inline-block;
     margin-right: 5%;
-    margin-left: 5%
+    margin-left: 5%;
+  }
+  .landing-welcome {
+    /*font-size: 3em;*/
   }
   #article-body {
     width: 80%;
     margin-left: 10%;
   }
 }
+
+/*@media only screen and (min-width: 1000px) {
+  .landing-welcome {
+    left: 68%;
+    font-size: 300%
+  }
+}
+@media only screen and (min-width: 920px) {
+  .landing-welcome {
+    left: 65%;
+    font-size: 275%;
+  }
+}
+@media only screen and (min-width: 840px) {
+  .landing-welcome {
+    left: 62%;
+    font-size: 250%;
+  }
+}
+@media only screen and (min-width: 760px) {
+  .landing-welcome {
+    left: 59%;
+    font-size: 225%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .landing-welcome {
+    left: 40.85%;
+  }
+}
+@media only screen and (max-width: 430px) {
+
+}*/
