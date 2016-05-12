@@ -1,8 +1,8 @@
 $(document).ready(function() {
 //Toggle Navbar Display on Click
   var $navigation = $('#hidden-nav');
-  $('.toggle-display').click(function(){
-    $navigation.slideToggle(100);
+  $('.toggle-display').on('click', function(){
+    $navigation.toggleClass('navigation-display');
   });
 });
 
@@ -24,10 +24,10 @@ Project.prototype.toHtml = function() {
   $newProject.find('img').attr('src', this.imagePlaceholder);
   $newProject.attr('data-category', this.category);
   $newProject.find('h1').text(this.title);
-  $newProject.find('a').attr('href', this.authorUrl);
-  $newProject.find('a').text(this.author);
+  $newProject.find('.by-line a').attr('href', this.authorUrl);
+  $newProject.find('.by-line a').text(this.author);
   $newProject.find('time').text(this.publishDate);
-  $newProject.find('section').text(this.body);
+  $newProject.find('section').html(this.body);
 
   $newProject.find('time').html('about ' + parseInt((new Date() - new Date(this.publishDate)) / 60 / 60 / 24 / 1000) + ' days ago');
   $newProject.append('<hr>');
