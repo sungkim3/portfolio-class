@@ -1,11 +1,3 @@
-$(document).ready(function() {
-//Toggle Navbar Display on Click
-  var $navigation = $('#hidden-nav');
-  $('.toggle-display').on('click', function(){
-    $navigation.toggleClass('navigation-display');
-  });
-});
-
 var projects = [];
 
 function Project (obj) {
@@ -19,20 +11,21 @@ function Project (obj) {
 }
 
 Project.prototype.toHtml = function() {
-  var $newProject = $('article.template').clone();
+  // var $newProject = $('article.template').clone();
+  // $newProject.find('img').attr('src', this.imagePlaceholder);
+  // $newProject.attr('data-category', this.category);
+  // $newProject.find('h2').text(this.title);
+  // $newProject.find('.by-line a').attr('href', this.authorUrl);
+  // $newProject.find('.by-line a').text(this.author);
+  // $newProject.find('time').text(this.publishDate);
+  // $newProject.find('section').html(this.body);
+  // $newProject.find('time').html('about ' + parseInt((new Date() - new Date(this.publishDate)) / 60 / 60 / 24 / 1000) + ' days ago');
+  // $newProject.append('<hr>');
+  // $newProject.removeClass('template');
 
-  $newProject.find('img').attr('src', this.imagePlaceholder);
-  $newProject.attr('data-category', this.category);
-  $newProject.find('h1').text(this.title);
-  $newProject.find('.by-line a').attr('href', this.authorUrl);
-  $newProject.find('.by-line a').text(this.author);
-  $newProject.find('time').text(this.publishDate);
-  $newProject.find('section').html(this.body);
-
-  $newProject.find('time').html('about ' + parseInt((new Date() - new Date(this.publishDate)) / 60 / 60 / 24 / 1000) + ' days ago');
-  $newProject.append('<hr>');
-  $newProject.removeClass('template');
-  return $newProject;
+  var $source = $('#project-template').html();
+  var template = Handlebars.compile($source);
+  return template(this);
 };
 
 projectCollection.sort(function(a,b) {
