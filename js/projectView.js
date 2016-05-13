@@ -1,7 +1,8 @@
 var projectView = {};
 //Handles Main Page View
 projectView.handleMainNav = function() {
-  $('.navigation-container').on('click', '.tab', function(){
+  $('.navigation-container').on('click', '.tab', function(event){
+    event.preventDefault();
     var $target = $(this).data('content');
     if ($target === $('#home-page').data('content')) {
       $('.tab-content').fadeIn();
@@ -12,8 +13,23 @@ projectView.handleMainNav = function() {
       $('#' + $target).fadeIn();
     }
   });
-
+  $('.navigation').on('click', '.tab', function(event) {
+    event.preventDefault();
+    $('.tab').removeClass('tab-highlight');
+    $(this).addClass('tab-highlight');
+  });
   $('.navigation-container .tab:first').click();
+};
+//Handles Navigation Resize and Toggle
+projectView.handleNavToggle = function() {
+  var $navigation = $('#hidden-nav');
+  $('.toggle-display').on('click', function(){
+    $('.navigation').css('transition', '0.5s all');
+    $navigation.toggleClass('navigation-display');
+  });
+  $(window).on('resize', function() {
+    $('.navigation').css('transition', 'none');
+  });
 };
 //Handles Show More and Show Less hyperlinks
 projectView.setTeasers = function() {
@@ -50,6 +66,7 @@ projectView.populateFilters = function() {
 projectView.handleCategoryFilter = function() {
   $('#category-filter').on('change', function() {
     if ($(this).val()) {
+      console.log($(this).val());
       $('#projects').find('article').hide();
       var $val = $(this).val();
       $('#projects').find('article').each(function(){
@@ -58,14 +75,16 @@ projectView.handleCategoryFilter = function() {
         }
       });
     } else {
+      console.log('I need to reset articles');
       $('#projects').find('article').not('.template').fadeIn();
     }
-    $('#category-filter').val('');
+    // $('#category-filter').val('');
   });
 };
 $(document).ready(function() {
   projectView.populateFilters();
   projectView.handleMainNav();
+  projectView.handleNavToggle();
   projectView.setTeasers();
   projectView.handleCategoryFilter();
 });

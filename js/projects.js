@@ -1,8 +1,8 @@
 var projectCollection = [
   {
     imagePlaceholder: 'img/annettelake.jpg',
-    category: 'biography',
-    title: 'About Me',
+    category: 'Biography',
+    title: 'ABOUT ME',
     authorUrl: 'http://sungkim3.github.io/about-me',
     author: 'Sung Kim',
     publishDate: '2016-04-14',
@@ -10,8 +10,8 @@ var projectCollection = [
   },
   {
     imagePlaceholder: 'img/cape-flattery.jpg',
-    category: 'sales',
-    title: 'Salmon Cookies',
+    category: 'Sales',
+    title: 'SALMON COOKIES',
     authorUrl: 'http://sungkim3.github.io/salmon-cookie',
     author: 'Sung Kim',
     publishDate: '2016-04-24',
@@ -19,8 +19,8 @@ var projectCollection = [
   },
   {
     imagePlaceholder: 'img/mailbox.jpg',
-    category: 'sales',
-    title: 'BusMall',
+    category: 'Sales',
+    title: 'BUSMALL',
     authorUrl: 'http://sungkim3.github.io/bus-mall',
     author: 'Sung Kim',
     publishDate: '2016-04-29',
@@ -28,8 +28,8 @@ var projectCollection = [
   },
   {
     imagePlaceholder: 'img/snowlake.jpg',
-    category: 'sports',
-    title: 'PongFellows',
+    category: 'Sports',
+    title: 'PONGFELLOWS',
     authorUrl: 'https://shaallfar.github.io/PongFellows/',
     author: 'Shawn Farro, Sean Champagne, Kyle Kennedy, Sung Kim',
     publishDate: '2016-05-06',

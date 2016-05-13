@@ -1,6 +1,6 @@
 .white-space {
   width: 100%;
-  height: 2.8em;
+  height: 4.4em;
   background: red;
 }
 .landing-image {
@@ -22,7 +22,10 @@
   text-align: center;
 }
 .navigation-container {
-  line-height: 1.5em;
+  line-height: 1.0em;
+}
+#filters {
+  margin-top: 1em;
 }
 #filters li {
   display: inline-block;

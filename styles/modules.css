@@ -23,32 +23,32 @@
 
 }
 .navigation {
-  display: none;
   background: black;
-  /*transition-property: all;
-  transition-duration: 2s;*/
-  /*height: 0;
-  overflow: none;*/
-
+  height: 0;
+  overflow: hidden;
 }
 .navigation-display {
-  /*overflow: none;*/
-  display: block;
-  /*height: auto;*/
-  /*overflow: hidden;*/
-
+  height: 2em;
+  overflow: none;
 }
-.navigation > li a {
+.navigation li {
+  margin-left: 1%;
+  margin-right: 4%;
+  display: inline-block;
+}
+.tab {
   background: black;
   color: white;
+  margin-left: 0.5em;
+}
+.tab-highlight {
+  color: rgb(102, 255, 255);
 }
 .containing-landing {
   position:static;
 }
 .landing-container {
   position: relative;
-  /*top: 2.8em;*/
-  /*left: 0em;*/
   width: 100%;
 }
 .landing-image {
@@ -60,7 +60,7 @@
   left: 70%;
   font-family: 'Oswald', sans-serif;
   z-index: 1;
-  font-size: 100%;
+  font-size: 3vw;
   color: black;
   font-weight: bold;
   border-bottom: solid;
@@ -71,10 +71,11 @@
   display: none;
 }
 .project-title {
-  margin-top: 1.2em;
+  margin-top: 0.8em;
   margin-bottom: 0.8em;
   padding: 0.4em;
-  /*background-color: rgba(0, 153, 51, 0.5);*/
+  font-size: 2em;
+  width: 100%;
   background: black;
   color: white;
   text-align: center;
@@ -86,24 +87,13 @@
   text-align: center;
 }
 
-@media only screen and (min-width: 500px) {
-  .landing-welcome {
-    left: 65%;
-    font-size: 150%;
-  }
-}
-
 @media only screen and (min-width: 640px) {
   .white-space {
-    height: 5em;
+    height: 5.6em;
   }
   .navigation {
-    margin-top: 2em;
-    display: block;
-  }
-  .landing-welcome {
-    left: 68%;
-    font-size: 175%;
+    height: 1.4em;
+    transition: none;
   }
   .toggle-display {
     display: none;
@@ -113,44 +103,8 @@
     margin-right: 5%;
     margin-left: 5%;
   }
-  .landing-welcome {
-    /*font-size: 3em;*/
-  }
   #article-body {
     width: 80%;
     margin-left: 10%;
   }
 }
-
-/*@media only screen and (min-width: 1000px) {
-  .landing-welcome {
-    left: 68%;
-    font-size: 300%
-  }
-}
-@media only screen and (min-width: 920px) {
-  .landing-welcome {
-    left: 65%;
-    font-size: 275%;
-  }
-}
-@media only screen and (min-width: 840px) {
-  .landing-welcome {
-    left: 62%;
-    font-size: 250%;
-  }
-}
-@media only screen and (min-width: 760px) {
-  .landing-welcome {
-    left: 59%;
-    font-size: 225%;
-  }
-}
-@media only screen and (max-width: 600px) {
-  .landing-welcome {
-    left: 40.85%;
-  }
-}
-@media only screen and (max-width: 430px) {
-
-}*/
