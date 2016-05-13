@@ -14,7 +14,10 @@
   right: 0;
   font-size: 1.2em;
   font-family: 'Cabin', sans-serif;
-  color: white;
+  color: black;
+  background: white;
+  border-radius: 0.2em;
+  padding: 0.2em;
 }
 .navigation-container {
   border-bottom: solid;
@@ -40,6 +43,9 @@
   background: black;
   color: white;
   margin-left: 0.5em;
+}
+.github-link {
+  color: white;
 }
 .tab-highlight {
   color: rgb(102, 255, 255);
