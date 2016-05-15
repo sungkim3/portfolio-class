@@ -1,5 +1,6 @@
 * {
   -webkit-font-smoothing: antialiased;
+  margin: 0 auto;
 }
 h1 {
   font-family: 'Cabin', sans-serif;
