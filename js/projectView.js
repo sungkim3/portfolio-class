@@ -81,10 +81,16 @@ projectView.handleCategoryFilter = function() {
     // $('#category-filter').val('');
   });
 };
-$(document).ready(function() {
-  projectView.populateFilters();
+
+projectView.initIndexPage = function() {
+  Project.all.forEach(function(p) {
+    if ($('#category-filter option:contains("' + p.category + '")').length === 0) {
+      $('#category-filter').append(p.toHtml($('#category-filter-template')));
+    }
+  });
+  // projectView.populateFilters();
   projectView.handleMainNav();
   projectView.handleNavToggle();
   projectView.setTeasers();
   projectView.handleCategoryFilter();
-});
+};
