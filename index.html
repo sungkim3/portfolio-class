@@ -19,8 +19,11 @@
           </div>
         </header>
         <section class="article-body" id="article-body">{{{body}}}</section>
-        <!-- <a href="#" class="read-on">Show More &rarr;</a> -->
+        <a href="#" class="read-on">Show More &rarr;</a>
       </article>
+    </script>
+    <script id="category-filter-template" type="text/x-handlebars-template">
+      <option value="{{category}}">{{category}}</option>
     </script>
   </head>
   <body>
@@ -48,7 +51,7 @@
     </header>
     <main>
       <section id="projects" class="tab-content">
-        <!-- <div>
+        <div>
           <ul id="filters">
             <li>
               <select id="category-filter">
@@ -56,7 +59,7 @@
               </select>
             </li>
           </ul>
-        </div> -->
+        </div>
       </section>
       <section id="about" class="tab-content">
         <p> This is my About me Section </p>
@@ -69,9 +72,9 @@
     <script src="/vendor/handlebars.js"></script>
     <!-- <script src="/js/projects.js"></script> -->
     <script src="/js/app.js"></script>
+    <script src="/js/projectView.js"></script>
     <script>
       Project.fetchAll();
     </script>
-    <script src="/js/projectView.js"></script>
   </body>
 </html>

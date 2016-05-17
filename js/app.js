@@ -42,22 +42,23 @@ Project.fetchAll = function() {
           console.log('eTags are the same');
           Project.loadAll(JSON.parse(localStorage.getItem('stringedProjects')));
           Project.appendProjects(Project.all);
-
-          // Project.loadAll(JSON.parse(localStorage.getItem('stringedProjects')));
+          projectView.initIndexPage();
         }
       }
     });
+
   } else {
     console.log('I do not have local storage');
-    Project.getData('/data/projectData.json');
     $.ajax({
       url: '/data/projectData.json',
       success: function(data, message, xhr) {
+        Project.getData('/data/projectData.json');
         var eTag = xhr.getResponseHeader('eTag');
         console.log(eTag);
         localStorage.setItem('stringedTag', JSON.stringify(eTag));
       }
     });
+
   }
 };
 
@@ -73,5 +74,6 @@ Project.getData = function(filePath) {
     Project.loadAll(data);
     localStorage.setItem('stringedProjects', JSON.stringify(Project.all));
     Project.appendProjects(Project.all);
+    projectView.initIndexPage();
   });
 };
