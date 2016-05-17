@@ -11,7 +11,8 @@
     <script id="project-template" type="text/x-handlebars-template">
       <article class="{{category}}" data-category="{{category}}">
         <header>
-          <h2 class="project-title">{{title}}</h2>
+          <h2 class="project-title" id="project-title">{{title}}</h2>
+          <p> {{numWords}} words written </p>
           <img class="project-image" src="{{imagePlaceholder}}"/>
           <div class="by-line">
             By <address><a href="{{authorUrl}}">{{author}}</a></address>
@@ -70,11 +71,10 @@
     </main>
     <script src="/vendor/jquery-2.1.4.js"></script>
     <script src="/vendor/handlebars.js"></script>
-    <!-- <script src="/js/projects.js"></script> -->
     <script src="/js/app.js"></script>
     <script src="/js/projectView.js"></script>
     <script>
-      Project.fetchAll();
+      Project.fetchAll(projectView.initIndexPage);
     </script>
   </body>
 </html>
