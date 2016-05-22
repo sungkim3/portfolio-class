@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name=”viewport” content=”width=device-width, initial-scale=1”>
+    <meta name="viewport" content="width=device-width" initial-scale="1">
     <link rel="stylesheet" type="text/css" href="vendor/reset.css">
     <link rel="stylesheet" type="text/css" href="styles/base.css">
     <link rel="stylesheet" type="text/css" href="styles/layout.css">
@@ -11,16 +11,17 @@
     <script id="project-template" type="text/x-handlebars-template">
       <article class="{{category}}" data-category="{{category}}">
         <header>
-          <h2 class="project-title" id="project-title">{{title}}</h2>
-          <p> {{numWords}} words written </p>
+          <h2 class="heading-title" id="project-title">{{title}}</h2>
           <img class="project-image" src="{{imagePlaceholder}}"/>
           <div class="by-line">
             By <address><a href="{{authorUrl}}">{{author}}</a></address>
-            published <time pubdate>{{publishDate}}</time>
+            published on <time pubdate>{{publishDate}}</time>
           </div>
         </header>
+        <p class="word-count"> {{numWords}} words written </p>
         <section class="article-body" id="article-body">{{{body}}}</section>
         <a href="#" class="read-on">Show More &rarr;</a>
+
       </article>
     </script>
     <script id="category-filter-template" type="text/x-handlebars-template">
@@ -35,8 +36,8 @@
         <nav class="navigation-container">
           <ul class="navigation" id="hidden-nav">
             <li><a id="home-page" class="tab" data-content="home" href="#">Home</a></li>
-            <li><a class="tab" data-content="about" href="#">About</a></li>
             <li><a class="tab" data-content="projects" href="#">Portfolio</a></li>
+            <li><a class="tab" data-content="about" href="#">Biography</a></li>
             <li><a class="tab" data-content="contact" href="#">Contact</a></li>
             <li><a class="github-link" href="https://github.com/sungkim3">GitHub</a></li>
           </ul>
@@ -46,7 +47,6 @@
       <div class="containing-landing">
         <div class="landing-container">
           <img class="landing-image" src="img/welcome.jpg"/>
-          <span class="landing-welcome">H A F A - A D A I</span>
         </div>
       </div>
     </header>
@@ -56,22 +56,24 @@
           <ul id="filters">
             <li>
               <select id="category-filter">
-                <option value=""> Filter by Categories </option>
+                <option class="options" value=""> Filter by Categories </option>
               </select>
             </li>
           </ul>
         </div>
       </section>
       <section id="about" class="tab-content">
-        <p> This is my About me Section </p>
+        <h2 class="section-title"> BIOGRAPHY </h2>
+        <p class="section-content"> This is my Biography Section </p>
       </section>
       <section id="contact" class="tab-content">
-        <p> This is my Contact Section </p>
+        <h2 class="section-title"> CONTACT </h2>
+        <p class="section-content"> This is my Contact Section </p>
       </section>
     </main>
     <script src="/vendor/jquery-2.1.4.js"></script>
     <script src="/vendor/handlebars.js"></script>
-    <script src="/js/app.js"></script>
+    <script src="/js/project.js"></script>
     <script src="/js/projectView.js"></script>
     <script>
       Project.fetchAll(projectView.initIndexPage);

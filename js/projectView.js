@@ -13,6 +13,7 @@
         $('.containing-landing').hide();
         $('#' + $target).fadeIn();
       }
+      $('.navigation').removeClass('navigation-display');
     });
     $('.navigation').on('click', '.tab', function(event) {
       event.preventDefault();
@@ -68,7 +69,7 @@
       }
     });
   };
-
+  //Initiates the loading of the index.html page
   projectView.initIndexPage = function() {
     Project.numWordsArticle();
     Project.all.forEach(function(p) {

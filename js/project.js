@@ -44,27 +44,11 @@
   };
 
   Project.getData = function(next) {
-    console.log('I am retrieving data');
     $.getJSON('/data/projectData.json', function(data) {
       Project.loadAll(data);
       localStorage.stringedProjects = JSON.stringify(Project.all);
       next();
     });
-  };
-//This was for the portfolio requirements in which we were expected to demonstrate
-//our ability to use a .map and .reduce method. The purpose of this function is
-//to collect all the titles (non redundant) into a new array.
-  Project.allTitles = function() {
-    return Project.all.map(function(project) {
-      return project.title;
-    })
-    .reduce(function(titles, title) {
-      if(titles.indexOf(title) === -1) {
-        titles.push(title);
-      }
-      console.log(titles);
-      return titles;
-    }, []);
   };
 
   Project.numWordsArticle = function() {
