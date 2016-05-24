@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width" initial-scale="1">
-    <link rel="stylesheet" type="text/css" href="vendor/reset.css">
+    <link rel="stylesheet" type="text/css" href="vendor/styles/reset.css">
     <link rel="stylesheet" type="text/css" href="styles/base.css">
     <link rel="stylesheet" type="text/css" href="styles/layout.css">
     <link rel="stylesheet" type="text/css" href="styles/modules.css">
@@ -21,7 +21,6 @@
         <p class="word-count"> {{numWords}} words written </p>
         <section class="article-body" id="article-body">{{{body}}}</section>
         <a href="#" class="read-on">Show More &rarr;</a>
-
       </article>
     </script>
     <script id="category-filter-template" type="text/x-handlebars-template">
@@ -30,19 +29,19 @@
   </head>
   <body>
     <header id="home" class="heading-container">
-      <header class="nav-header-container">
+      <div class="nav-header-container">
         <h1 class="heading">SUNG KIM</h1>
         <div class="toggle-display">MENU</div>
         <nav class="navigation-container">
           <ul class="navigation" id="hidden-nav">
-            <li><a id="home-page" class="tab" data-content="home" href="#">Home</a></li>
-            <li><a class="tab" data-content="projects" href="#">Portfolio</a></li>
-            <li><a class="tab" data-content="about" href="#">Biography</a></li>
-            <li><a class="tab" data-content="contact" href="#">Contact</a></li>
+            <li><a id="home-page" class="tab" data-content="home" href="/">Home</a></li>
+            <li><a class="tab" data-content="projects" href="/projects">Portfolio</a></li>
+            <li><a class="tab" data-content="about" href="/biography">Biography</a></li>
+            <li><a class="tab" data-content="contact" href="/contact">Contact</a></li>
             <li><a class="github-link" href="https://github.com/sungkim3">GitHub</a></li>
           </ul>
         </nav>
-      </header>
+      </div>
       <div class="white-space"></div>
       <div class="containing-landing">
         <div class="landing-container">
@@ -71,12 +70,15 @@
         <p class="section-content"> This is my Contact Section </p>
       </section>
     </main>
-    <script src="/vendor/jquery-2.1.4.js"></script>
-    <script src="/vendor/handlebars.js"></script>
-    <script src="/js/project.js"></script>
-    <script src="/js/projectView.js"></script>
-    <script>
-      Project.fetchAll(projectView.initIndexPage);
-    </script>
+    <script src="/vendor/scripts/jquery-2.1.4.js"></script>
+    <script src="/vendor/scripts/handlebars.js"></script>
+    <script src="/vendor/scripts/page.js"></script>
+    <script src="/js/model/project.js"></script>
+    <script src="/js/view/projectView.js"></script>
+    <script src="/js/controller/homeController.js"></script>
+    <script src="/js/controller/bioController.js"></script>
+    <script src="/js/controller/contactController.js"></script>
+    <script src="/js/controller/projectController.js"></script>
+    <script src="/js/controller/routes.js"></script>
   </body>
 </html>
