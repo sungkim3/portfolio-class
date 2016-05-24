@@ -2,6 +2,7 @@
   var bioController = {};
 
   bioController.index = function() {
+    projectView.handleMainNav();
     $('#projects').hide();
     $('.containing-landing').hide();
     $('#contact').hide();
