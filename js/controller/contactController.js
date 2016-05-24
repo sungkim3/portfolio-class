@@ -2,6 +2,7 @@
   var contactController = {};
 
   contactController.index = function() {
+    projectView.handleMainNav();
     $('#projects').hide();
     $('.containing-landing').hide();
     $('#about').hide();

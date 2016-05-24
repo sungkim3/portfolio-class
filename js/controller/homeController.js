@@ -2,8 +2,10 @@
   var homeController = {};
 
   homeController.index = function() {
-    Project.fetchAll(projectView.initIndexPage);
-
+    if (Project.all.length === 0) {
+      Project.fetchAll(projectView.initIndexPage);
+    }
+    projectView.handleMainNav();
     $('.containing-landing').show();
     $('#projects').show();
     $('#about').show();

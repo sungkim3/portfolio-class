@@ -2,7 +2,7 @@
   var projectView = {};
 
   //Handles Main Page View
-  // projectView.handleMainNav = function() {
+  projectView.handleMainNav = function() {
     // $('.navigation-container').on('click', '.tab', function(event){
     //   event.preventDefault();
     //   var $target = $(this).data('content');
@@ -16,13 +16,14 @@
     //   }
     //   $('.navigation').removeClass('navigation-display');
     // });
-  //   $('.navigation').on('click', '.tab', function(event) {
-  //     event.preventDefault();
-  //     $('.tab').removeClass('tab-highlight');
-  //     $(this).addClass('tab-highlight');
-  //   });
-  //   $('.navigation-container .tab:first').click();
-  // };
+    $('.navigation').on('click', '.tab', function(event) {
+      // event.preventDefault();
+      $('.tab').removeClass('tab-highlight');
+      $(this).addClass('tab-highlight');
+    });
+    $('.navigation').removeClass('navigation-display');
+    // $('.navigation-container .tab:first').click();
+  };
 
   //Handles Navigation Resize and Toggle
   projectView.handleNavToggle = function() {
