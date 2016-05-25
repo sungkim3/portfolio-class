@@ -5,7 +5,7 @@
     if (Project.all.length === 0) {
       Project.fetchAll(projectView.initIndexPage);
     }
-    projectView.handleMainNav();
+    // projectView.handleMainNav();
     // projectView.handleNavToggle();
     $('.containing-landing').show();
     $('#projects').show().siblings().show();

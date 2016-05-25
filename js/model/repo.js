@@ -4,16 +4,20 @@
   Repos.all = [];
 
   Repos.requestRepos = function(callback) {
-    $.ajax ({
-      url: 'https://api.github.com/users/sungkim3/repos' +
-            '?sort=updated',
-      type: 'GET',
-      headers: {'Authorization': 'token ' + gitHubToken},
-      success: function(data) {
-        Repos.all = data;
-        callback();
-      }
-    });
+    // $.ajax ({
+    //   url: 'https://api.github.com/users/sungkim3/repos' +
+    //         '?sort=updated',
+    //   type: 'GET',
+    //   headers: {'Authorization': 'token ' + gitHubToken},
+    //   success: function(data) {
+    //     Repos.all = data;
+    //     callback();
+    //   }
+    // });
+    $.get('/github/users/sungkim3/repos' +
+          '?sort=updated').done(function(data) {
+            Repos.all = data;
+          }).done(callback);
   };
 
   Repos.with = function(attr) {

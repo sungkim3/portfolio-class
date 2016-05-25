@@ -20,8 +20,8 @@
       // event.preventDefault();
       $('.tab').removeClass('tab-highlight');
       $(this).addClass('tab-highlight');
+      $('.navigation').removeClass('navigation-display');
     });
-    $('.navigation').removeClass('navigation-display');
     // $('.navigation-container .tab:first').click();
   };
   //Handles Navigation Resize and Toggle
@@ -82,7 +82,7 @@
       $('#projects').append(p.toHtml($('#project-template')));
     });
     // projectView.handleMainNav();
-    projectView.handleNavToggle();
+    // projectView.handleNavToggle();
     projectView.setTeasers();
     projectView.handleCategoryFilter();
   };

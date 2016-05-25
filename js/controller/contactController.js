@@ -2,7 +2,7 @@
   var contactController = {};
 
   contactController.index = function() {
-    projectView.handleMainNav();
+    // projectView.handleMainNav();
     // projectView.handleNavToggle();
     $('.containing-landing').hide();
     $('#contact').show().siblings().hide();
