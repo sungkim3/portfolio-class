@@ -2,8 +2,6 @@
   var projectController = {};
 
   projectController.index = function(){
-    // projectView.handleMainNav();
-    // projectView.handleNavToggle();
     if($('#projects > article').length === 0){
       Project.fetchAll(projectView.initIndexPage);
     }
