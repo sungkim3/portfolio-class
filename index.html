@@ -26,6 +26,17 @@
     <script id="category-filter-template" type="text/x-handlebars-template">
       <option value="{{category}}">{{category}}</option>
     </script>
+    <script id="repo-template" type="text/x-handlebars-template">
+      <li>
+        <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
+        <p> Description: {{description}} </p>
+        <p> Language: {{language}} </p>
+        <p> Created: {{created_at}} </p>
+        <p> Last Updated: {{updated_at}} </p>
+        {{#if watchers_count}}
+          <p> {{watchers}} watching this repo </p>
+        {{/if}}
+    </script>
   </head>
   <body>
     <header id="home" class="heading-container">
@@ -38,6 +49,7 @@
             <li><a class="tab" data-content="projects" href="/projects">Portfolio</a></li>
             <li><a class="tab" data-content="about" href="/biography">Biography</a></li>
             <li><a class="tab" data-content="contact" href="/contact">Contact</a></li>
+            <li><a class="tab" data-content="repos" href="/repos">Repository</a></li>
             <li><a class="github-link" href="https://github.com/sungkim3">GitHub</a></li>
           </ul>
         </nav>
@@ -69,16 +81,34 @@
         <h2 class="section-title"> CONTACT </h2>
         <p class="section-content"> This is my Contact Section </p>
       </section>
+      <section id="repo" class="tab-content">
+        <h2 class="section-title"> REPOSITORIES </h2>
+        <ul id="repo-list">
+          <li> Put Repos Here </li>
+        </ul>
+      </section>
     </main>
     <script src="/vendor/scripts/jquery-2.1.4.js"></script>
     <script src="/vendor/scripts/handlebars.js"></script>
     <script src="/vendor/scripts/page.js"></script>
+    <script src="gitHubToken.js"></script>
+
     <script src="/js/model/project.js"></script>
     <script src="/js/view/projectView.js"></script>
+
+    <script src="/js/model/repo.js"></script>
+    <script src="/js/view/repoView.js"></script>
+
+    <script>
+      projectView.handleNavToggle();
+      projectView.handleMainNav();
+    </script>
+
     <script src="/js/controller/homeController.js"></script>
     <script src="/js/controller/bioController.js"></script>
     <script src="/js/controller/contactController.js"></script>
     <script src="/js/controller/projectController.js"></script>
+    <script src="/js/controller/repoController.js"></script>
     <script src="/js/controller/routes.js"></script>
   </body>
 </html>

@@ -5,11 +5,10 @@
     if (Project.all.length === 0) {
       Project.fetchAll(projectView.initIndexPage);
     }
-    projectView.handleMainNav();
+    // projectView.handleMainNav();
+    // projectView.handleNavToggle();
     $('.containing-landing').show();
-    $('#projects').show();
-    $('#about').show();
-    $('#contact').show();
+    $('#projects').show().siblings().show();
   };
 
   module.homeController = homeController;

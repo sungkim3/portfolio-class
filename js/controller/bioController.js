@@ -2,11 +2,10 @@
   var bioController = {};
 
   bioController.index = function() {
-    projectView.handleMainNav();
-    $('#projects').hide();
+    // projectView.handleMainNav();
+    // projectView.handleNavToggle();
     $('.containing-landing').hide();
-    $('#contact').hide();
-    $('#about').show();
+    $('#about').show().siblings().hide();
   };
 
   module.bioController = bioController;

@@ -2,14 +2,13 @@
   var projectController = {};
 
   projectController.index = function(){
-    projectView.handleMainNav();
+    // projectView.handleMainNav();
+    // projectView.handleNavToggle();
     if($('#projects > article').length === 0){
       Project.fetchAll(projectView.initIndexPage);
     }
     $('.containing-landing').hide();
-    $('#about').hide();
-    $('#contact').hide();
-    $('#projects').show();
+    $('#projects').show().siblings().hide();
   };
 
   module.projectController = projectController;
