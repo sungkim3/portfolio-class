@@ -24,7 +24,6 @@
     $('.navigation').removeClass('navigation-display');
     // $('.navigation-container .tab:first').click();
   };
-
   //Handles Navigation Resize and Toggle
   projectView.handleNavToggle = function() {
     var $navigation = $('#hidden-nav');

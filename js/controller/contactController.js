@@ -3,10 +3,9 @@
 
   contactController.index = function() {
     projectView.handleMainNav();
-    $('#projects').hide();
+    // projectView.handleNavToggle();
     $('.containing-landing').hide();
-    $('#about').hide();
-    $('#contact').show();
+    $('#contact').show().siblings().hide();
   };
 
   module.contactController = contactController;
