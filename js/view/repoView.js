@@ -4,7 +4,6 @@
   var ui = function() {
     var $repo = $('#repo');
     $repo.find('ul').empty();
-    // $repo.show().siblings.hide();
   };
 
   var renderRepo = Handlebars.compile($('#repo-template').html());
