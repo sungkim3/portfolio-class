@@ -1,10 +1,8 @@
 .white-space {
-  width: 100%;
   height: 4.4em;
-  background: black;
 }
 .landing-image {
-  max-width: 100%;
+  width: 100%;
 }
 .nav-header-container {
   position: fixed;
@@ -17,8 +15,8 @@
   text-align: center;
 }
 .toggle-display {
-  margin-top: 0.4em;
-  margin-right: 0.4em;
+  margin-top: 0.5em;
+  margin-right: 0.5em;
   text-align: center;
 }
 .navigation-container {
@@ -37,8 +35,4 @@
 }
 #projects {
   text-align: center;
-}
-
-@media only screen and (min-width: 640px) {
-
 }

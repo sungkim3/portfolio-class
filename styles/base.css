@@ -1,5 +1,6 @@
 * {
   -webkit-font-smoothing: antialiased;
+  margin: 0 auto;
 }
 h1 {
   font-family: 'Cabin', sans-serif;
@@ -20,7 +21,7 @@ nav {
 }
 section {
   font-family: 'Roboto', sans-serif;
-  line-height: 1.2em;
+  line-height: 1.5;
   /*margin: 1em;*/
 }
 address {
